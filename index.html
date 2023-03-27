@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha512-L7MWcK7FNPcwNqnLdZq86lTHYLdQqZaz5YcAgE+5cnGmlw8JT03QB2+oxL100UeB6RlzZLUxCGSS4/++mNZdxw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <style>
+        
+html {
+    font-size: 10px;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: block;
+    margin: 8px;
+}
+.section-padding {
+    padding: 20px 20px 40px;
+}
+ul {
+    list-style: none;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+h1,h2 {
+    font-weight: 300;
+    line-height: 1.2;
+}
+p {
+    margin: 1rem;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark);
+    opacity: 0.8;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 3rem;
+}
+.navbar a{
+    color: #fff;
+    padding: 1rem 2rem;
+    margin: 0 .5px;
+}
+.navbar a:hover {
+   border-bottom: 2px solid var(--warning);
+}
+.navbar ul{
+    display: flex;
+}
+.navbar .brand {
+    font-weight: 400;
+}
+.navbar h1 {
+    font-size: 3rem;
+}
+.navbar span {
+    color: var(--warning);
+}
+.main-header {
+    background-image: url('images.html/bg-1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    position: relative;
+}
+.main-header .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+.main-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0,0,0.6);
+}
+.main-header *{
+    z-index: 5;
+}
+.main-header .content h1 {
+    font-size: 5.5rem;
+}
+.main-header .content p {
+    font-size: 2.3rem;
+    max-width: 60rem;
+    margin:  2rem 0 3rem;
+}
+.icons {
+    padding: 30px;
+}
+.icons h3 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.icons i {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+.about {
+    color: #fff;
+} 
+.card {
+    color: #fff;
+    font-weight: 700;
+}
+.card-body {
+    padding: rem;
+}
+.teams img{
+    border-radius: 50%;
+}
+ :root {
+    --white: #fff;
+    --primary:#007bff;
+    --secondary:#6c757d;
+    --success:#28a745;
+    --danger:#dc3545;
+    --warning:#ffc107;
+    --info:#17a2b8;
+    --dark:#343a40;
+    --light:#f8f9fa;
+}
+.text-primary {color: var(--primary);}
+.text-secondary {color: var(--secondary);}
+.text-success {color: var(--success);}
+.text-danger {color: var(--danger);}
+.text-warning {color: var(--warning);}
+.text-info{color: var(--info);}
+.text-dark {color: var(--dark);}
+.text-light {color: var(--light);}
+
+.bg-primary {background-color: var(--primary);}
+.bg-secondary {background-color: var(--secondary);}
+.bg-success {background-color: var(--success);}
+.bg-danger {background-color: var(--danger);}
+.bg-warning {background-color: var(--warning);}
+.bg-info {background-color: var(--info);}
+.bg-dark {background-color: var(--dark);}
+.bg-light {background-color: var(--light);}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+}
+.btn:hover {
+    opacity: 0.9;
+}
+.btn-primary {
+    color: var(--white);
+    background-color: var(--primary);
+}
+.btn-secondary {
+    color: var(--white);
+    background-color: var(--secondary);
+}
+.btn-danger {
+    color: var(--white);
+    background-color: var(--danger);
+}
+.btn-warning {
+    color: var(--white);
+    background-color: var(--warning);
+}
+.btn-dark {
+    color: var(--white);
+    background-color: var(--dark);
+}
+.btn-outline-primary{
+   background: transparent;
+    border: 1px solid var(--primary);
+    color: var(--dark);
+}
+.btn-outline {
+   background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+.btn-outline-primary:hover{
+  background-color: var(--primary);
+    border: 1px solid var(--primary);
+    color: var(--white);
+}
+.flex-items {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+.flex-items > div {
+    padding: 20px;
+    flex-basis: 100%;
+}
+.flex-columns.flex-reverse .row{
+    flex-direction: row-reverse;
+}
+.flex-columns .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.flex-columns .column{
+    flex: 1;
+}
+.flex-columns .column .column-1,
+.flex-columns .column .column-2{
+    height: 100%;
+  margin-left: 20px;
+
+}
+.flex-columns .column-2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 8rem ;
+}
+.flex-columns image{
+    width: 100%;
+    height: 100%;
+  
+}
+ .flex-grid .row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 .4rem;
+    width: 100%;
+    height: 100%;
+}
+.flex-grid .column{
+    flex: 25%;
+    padding: 0 .4rem;
+    width: 100%;
+   height: 100%;
+}
+.flex-columns h2 {
+    font-size: 4rem;
+    font-weight: 400;
+}
+.flex-columns p {
+    margin: 2rem;
+}
+.section-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+}
+.section-header h2{
+    font-size: 4rem;
+    margin: 2rem 0;
+
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
+}
+.footer a {
+    color: var(--danger); 
+}
+.footer a:hover {
+    opacity: 0.7;
+} 
+.footer .social a {
+    margin-right: 10px;
+}
+@media (max-width: 768px){
+    html{
+        font-size: 9px;
+    }
+    .navbar {
+        flex-direction: column;
+        height: 120px;
+        padding: 20px;
+    }
+}
+    </style>
+</head>
+<body>
+        <header id="home" class="main-header">
+  <div class="navbar">
+    <h1 class="brand">
+        <i class="fas fa-hotel"></i>
+        <span>Deluke</span> Hotel
+    </h1>
+    <nav>
+        <ul>
+            <li> <a href="#home">Home</a></li>
+            <li> <a href="#about">About</a></li>
+            <li> <a href="#rooms">Rooms</a></li>
+            <li> <a href="blogs.html">Blogs</a></li>
+            <li> <a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+
+    <div class="content">
+            <h1>Welcome To Deluxe</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius, maxime.</p>
+            <a href="" class="btn btn-primary">
+                 <i class="fas fa-chevron-right"></i>
+                Read More</a>
+        </div>
+        </header>
+        <main>
+            <section id="services" class="icons by-light">
+                <div class="flex-items">
+                    <div>
+                      <i class="fas fa-concierge-bell fa-3x"></i> 
+                      <div>
+                        <h3> 24/7 front Desk</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, hic!</p>
+                      </div> 
+                    </div>
+                    <div>
+                        <i class="fas fa-utensils fa-3x"></i> 
+                        <div>
+                          <h3> Restaurant Bar</h3>
+                          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, hic!</p>
+                        </div> 
+                      </div>
+                      <div>
+                        <i class="fas fa-bus fa-3x"></i> 
+                        <div>
+                          <h3>Transfer Services</h3>
+                          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, hic!</p>
+                        </div> 
+                      </div>
+                      <div>
+                        <i class="fas fa-spa fa-3x"></i> 
+                        <div>
+                          <h3>Spa Suites</h3>
+                          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, hic!</p>
+                        </div> 
+                      </div>
+                </div>
+            </section>
+
+            <section id="about" class="about flex-columns">
+                <div class="row">
+                    <div class="column">
+                        <div class="column-1">
+                            <img src="images.html/about1.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="column">
+                    <div class="column-2 bg-secondary">
+                        <h2>Customer Service</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, voluptatibus.</p>
+                        <button class="btn btn-outline">Read More</button>
+                   </div> 
+                </div>
+                </div>
+            </section>
+
+          <section id="gallery" class="flex-grid section-padding">
+            <header class="section-header">
+                <h2>Lorem ,ipsum.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, incidunt?</p>
+            </header>
+            <div class="row">
+                <div class="column">
+                    <img src="images.html/1.jpeg" alt="">
+                    <img src="images.html/2.jpeg" alt="">
+                </div>
+                <div class="column">
+                    <img src="images.html/3.jpeg" alt="">
+                    <img src="images.html/4.jpeg" alt="">
+                </div>
+                <div class="column">
+                    <img src="images.html/1.jpeg" alt="">
+                    <img src="images.html/2.jpeg" alt="">
+                </div>
+                
+            </div>
+          </section>
+                              
+            <section  class="about flex-columns flex-reverse">
+                <div class="row">
+                    <div class="column">
+                        <div class="column-1">
+                            <img src="images.html/about2.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="column">
+                    <div class="column-2 bg-primary">
+                        <h2>Customer Service</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, voluptatibus.</p>
+                        <button class="btn btn-outline">Read More</button>
+                   </div> 
+                </div>
+                </div>
+            </section>
+            
+            <section id="rooms" class="rooms section-padding">
+                <header class="section-header">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, qui!</p>
+                </header>
+                <div class="flex-items">
+                    <div class="card">
+                        <img src="images.html/room1.jpeg" alt="">
+                        <div class="vard-body bg-warning">
+                            <h2>Deluxe Room</h2>
+                            <p>Lorem, ipsum.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images.html/room2.jpeg" alt="">
+                        <div class="vard-body bg-warning">
+                            <h2>Superior Room</h2>
+                            <p>Lorem, ipsum.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="images.html/room3.jpeg" alt="">
+                        <div class="vard-body bg-warning">
+                            <h2>Standart Room</h2>
+                            <p>Lorem, ipsum.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="teams" class="teams section-padding by-light">
+                <header class="section-header">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, qui!</p>
+                </header>
+                <div class="flex-items"></div>
+                <div>
+                    <img src="images.html/p1.jpeg" alt="">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Manager</p>
+                </div>
+                <div>
+                    <img src="images.html/p2.jpeg" alt="">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Manager</p>
+                </div>
+                <div>
+                    <img src="images.html/p3.jpeg" alt="">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Manager</p>
+                </div>
+            </section>
+
+            <section id="contact" class="contact flex-columns">
+                <div class="row">
+                    <div class="column">
+                        <div class="column-1">
+                            <img src="images.html/contact.jpeg" alt="">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="column-2 bg-light">
+                           <h2> Contact Us</h2>
+                           <form action="" class="contact-form">
+                            <div class="form-control">
+                                <label for="name">Name</label>
+                                <input type="text" id="name"
+                                placeholder="Enter your name">
+                            </div>
+                            <div class="column-2 bg-light">
+                                <h2> Contact Us</h2>
+                                <form action="" class="contact-form">
+                                 <div class="form-control">
+                                 <label for="name">Email</label>
+                                 <input type="email" id="email"
+                                     placeholder="Enter your email">
+                                 </div>
+                                 <div class="column-2 bg-light">
+                                 <h2> Contact Us</h2>
+                                 <form action="" class="contact-form">
+                                 <div class="form-control">
+                                    <label for="name">Phone</label>
+                                   <input type="text" id="phone"
+                                   placeholder="Enter your phone">
+                                     </div>
+                           </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer bg-light">
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-Linkedin fa-2x"></i></a>
+                </div>
+                 <p> Copyright &copy 2025 - Hotel Site</p>
+            </footer>
+        </main>
+        </body>
+        </html>
